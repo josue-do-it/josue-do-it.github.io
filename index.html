@@ -3,92 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josue Romaric - Software Engineer & AI Specialist</title>
-    <meta name="description" content="Portfolio of Josue Romaric, a passionate software engineer focused on AI, web development, and innovative solutions.">
-    <meta name="author" content="Josue Romaric">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Josue Romaric - Software Engineer & AI Specialist">
-    <meta property="og:description" content="Portfolio of Josue Romaric, a passionate software engineer focused on AI, web development, and innovative solutions.">
-    <meta property="og:type" content="website">
-    
-    <!-- Stylesheets -->
+    <title>Josue Romaric - Portfolio</title>
+    <meta name="description" content="Josue Romaric - Software Engineer focused on AI, web development, and innovative solutions">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="gradient-bg"></div>
-        
-        <div class="container">
-            <div class="hero-content fade-in">
-                <!-- Profile Image -->
-                <div class="profile-wrapper">
-                    <div class="profile-glow"></div>
-                    <img src="images/profile.jpg" alt="Josue Romaric" class="profile-image">
-                </div>
-
-                <!-- Name and Title -->
-                <div class="hero-text">
-                    <h1 class="hero-title">Josue Romaric</h1>
-                    <p class="hero-subtitle">
-                        I am a passionate software engineer focused on AI, web development, and innovative solutions.
-                    </p>
-                </div>
-
-                <!-- Theme Toggle -->
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <img src="images/profile.jpg" alt="Josue Romaric" class="profile-image">
             </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-bar">
-                <div class="scroll-dot"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Links -->
-    <section id="social" class="social-section">
-        <div class="container">
+            <h1 class="hero-title">Josue Romaric</h1>
+            <p class="hero-subtitle">I am a passionate software engineer focused on AI, web development, and innovative solutions.</p>
+            
             <div class="social-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                <a href="https://github.com/josueromaric" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
+                <a href="https://linkedin.com/in/josueromaric" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                <a href="https://twitter.com/josueromaric" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
                 </a>
-                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Scholar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                <a href="https://scholar.google.com/citations?user=josueromaric" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L6 9h12L12 0zm0 10L5 24h14L12 10zm-1 5h2v6h-2v-6z"/>
                     </svg>
                 </a>
             </div>
@@ -96,227 +61,83 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">Skills & Expertise</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-
+            <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">AI</div>
-                <div class="skill-tag">Machine Learning</div>
-                <div class="skill-tag">Web Development</div>
-                <div class="skill-tag">CSS</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">Git</div>
-                <div class="skill-tag">Docker</div>
-                <div class="skill-tag">TypeScript</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">Deep Learning</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">AI</div>
+                <div class="skill-card">Machine Learning</div>
+                <div class="skill-card">Web Development</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Git</div>
+                <div class="skill-card">Docker</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">Featured Projects</h2>
-                <p class="section-subtitle">A selection of my recent work</p>
-            </div>
-
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <h3 class="project-title">AI Content Generator</h3>
-                    <p class="project-description">
-                        Advanced machine learning platform that generates high-quality content using state-of-the-art language models. Features real-time processing and customizable output formats.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Demo
-                        </a>
-                        <a href="#" class="btn btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            Code
-                        </a>
-                    </div>
+                    <h3 class="project-title">AI Assistant Platform</h3>
+                    <p class="project-description">Built an intelligent assistant using machine learning to automate customer support with 95% accuracy.</p>
+                    <a href="#" class="project-link">View Project →</a>
                 </div>
-
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <h3 class="project-title">Smart Analytics Dashboard</h3>
-                    <p class="project-description">
-                        Real-time data visualization platform built with modern web technologies. Provides actionable insights through interactive charts and customizable dashboards.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">D3.js</span>
-                        <span class="tag">Node.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Demo
-                        </a>
-                        <a href="#" class="btn btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            Code
-                        </a>
-                    </div>
+                    <h3 class="project-title">Web Analytics Dashboard</h3>
+                    <p class="project-description">Created a real-time analytics platform with interactive visualizations for data-driven insights.</p>
+                    <a href="#" class="project-link">View Project →</a>
                 </div>
-
-                <!-- Project 3 -->
                 <div class="project-card">
-                    <h3 class="project-title">Neural Network Optimizer</h3>
-                    <p class="project-description">
-                        Open-source toolkit for optimizing deep learning models. Includes automated hyperparameter tuning and performance benchmarking tools.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">MLOps</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            Demo
-                        </a>
-                        <a href="#" class="btn btn-outline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            Code
-                        </a>
-                    </div>
+                    <h3 class="project-title">Deep Learning Model</h3>
+                    <p class="project-description">Developed a neural network for image classification achieving state-of-the-art performance.</p>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">Cloud Infrastructure</h3>
+                    <p class="project-description">Designed scalable microservices architecture using Docker and Kubernetes for high availability.</p>
+                    <a href="#" class="project-link">View Project →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">About Me</h2>
-            </div>
-
-            <div class="about-card">
-                <div class="glass-glow"></div>
-                <div class="about-content">
-                    <p>
-                        Hello! I'm <strong class="text-primary">Josue Romaric</strong>, a passionate software engineer with a deep fascination for artificial intelligence and modern web technologies. My journey in tech began with a curiosity about how intelligent systems work, which evolved into a career dedicated to building innovative solutions that make a real impact.
-                    </p>
-                    <p>
-                        I specialize in developing cutting-edge AI applications, creating intuitive web experiences, and architecting scalable systems. Whether it's training machine learning models, crafting responsive interfaces, or optimizing backend performance, I bring creativity and technical excellence to every project.
-                    </p>
-                    <p>
-                        When I'm not coding, you'll find me exploring the latest research papers, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and the power of technology to solve complex problems.
-                    </p>
-                </div>
-                <div class="decorative-blob blob-1"></div>
-                <div class="decorative-blob blob-2"></div>
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I'm a software engineer with a deep passion for artificial intelligence and cutting-edge web technologies. 
+                    My journey in tech has been driven by curiosity and a desire to create innovative solutions that make a real impact. 
+                    With expertise spanning from machine learning algorithms to full-stack development, I thrive on solving complex 
+                    problems and turning ideas into reality. When I'm not coding, you'll find me exploring the latest AI research 
+                    or contributing to open-source projects.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Awards Section -->
-    <section id="awards" class="awards-section">
+    <section id="awards" class="awards">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">Awards & Publications</h2>
-                <p class="section-subtitle">Recognition and research contributions</p>
-            </div>
-
+            <h2 class="section-title">Awards & Publications</h2>
             <div class="awards-list">
                 <div class="award-item">
-                    <div class="award-icon award">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="award-content">
-                        <h3 class="award-title">Best AI Innovation Award</h3>
-                        <p class="award-org">TechConf 2024</p>
-                        <p class="award-desc">Recognition for outstanding contribution to AI-powered solutions</p>
-                    </div>
+                    <h3 class="award-title">Best Paper Award</h3>
+                    <p class="award-description">International Conference on Machine Learning (ICML 2024)</p>
                 </div>
-
                 <div class="award-item">
-                    <div class="award-icon paper">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                    </div>
-                    <div class="award-content">
-                        <h3 class="award-title">Deep Learning Optimization Techniques</h3>
-                        <p class="award-org">International Journal of AI Research</p>
-                        <p class="award-desc">Published research on novel neural network optimization methods</p>
-                    </div>
+                    <h3 class="award-title">Innovation Excellence Award</h3>
+                    <p class="award-description">Tech Innovation Summit 2023</p>
                 </div>
-
                 <div class="award-item">
-                    <div class="award-icon award">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="award-content">
-                        <h3 class="award-title">Outstanding Graduate Achievement</h3>
-                        <p class="award-org">University Excellence Program</p>
-                        <p class="award-desc">Awarded for exceptional academic performance and research contributions</p>
-                    </div>
-                </div>
-
-                <div class="award-item">
-                    <div class="award-icon paper">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                    </div>
-                    <div class="award-content">
-                        <h3 class="award-title">Real-time Web Performance Analysis</h3>
-                        <p class="award-org">Web Development Conference 2023</p>
-                        <p class="award-desc">Presented findings on modern web optimization strategies</p>
-                    </div>
+                    <h3 class="award-title">Published Research</h3>
+                    <p class="award-description">"Deep Learning Approaches for Natural Language Processing" - ACM Journal</p>
                 </div>
             </div>
         </div>
@@ -324,19 +145,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <span>Made with</span>
-                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                    <span>by</span>
-                    <strong class="footer-name">Josue Romaric</strong>
-                </div>
-                <p class="copyright">© 2025 Josue Romaric. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2025 Josue Romaric. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

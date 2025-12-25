@@ -4,132 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josué Romaric EDOU - AI Engineer</title>
+    <meta name="description" content="AI Engineer & Data Scientist passionate about machine learning and innovation">
+    <meta name="author" content="Josué Romaric EDOU">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root{--primary:#0a0a0f;--secondary:#12121a;--tertiary:#1a1a25;--accent:#6366f1;--accent-light:#818cf8;--accent-glow:rgba(99,102,241,0.3);--text-primary:#f8fafc;--text-secondary:#94a3b8;--text-muted:#64748b;--border:rgba(99,102,241,0.2);--card-bg:rgba(18,18,26,0.8);--gradient-primary:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);--shadow:0 25px 50px -12px rgba(0,0,0,0.5)}
-        [data-theme="light"]{--primary:#f8fafc;--secondary:#f1f5f9;--tertiary:#e2e8f0;--text-primary:#0f172a;--text-secondary:#475569;--card-bg:rgba(255,255,255,0.9);--shadow:0 25px 50px -12px rgba(0,0,0,0.1)}
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{font-family:'Source Sans 3',sans-serif;background:var(--primary);color:var(--text-primary);line-height:1.7;overflow-x:hidden;transition:all 0.4s ease}
-        .bg-animation{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:var(--primary)}
-        .bg-animation::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 20% 80%,var(--accent-glow) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(139,92,246,0.15) 0%,transparent 50%);animation:bgPulse 20s ease-in-out infinite}
-        @keyframes bgPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:0.8}}
-        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,15,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all 0.3s ease}
-        [data-theme="light"] nav{background:rgba(248,250,252,0.85)}
-        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}
-        .logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .nav-right{display:flex;align-items:center;gap:2rem}
-        .nav-links{display:flex;gap:0.3rem;list-style:none}
-        .nav-links a{color:var(--text-primary);text-decoration:none;padding:0.6rem 1rem;font-size:0.9rem;font-weight:500;border-radius:8px;transition:all 0.3s ease}
-        .nav-links a:hover{background:var(--accent-glow);color:var(--accent-light)}
-        .theme-toggle{background:var(--tertiary);border:1px solid var(--border);border-radius:50px;padding:0.5rem;cursor:pointer;display:flex;align-items:center;gap:0.5rem}
-        .theme-toggle i{font-size:1rem;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:var(--text-secondary)}
-        .theme-toggle .fa-moon{background:var(--gradient-primary);color:white}
-        [data-theme="light"] .theme-toggle .fa-sun{background:var(--gradient-primary);color:white}
-        [data-theme="light"] .theme-toggle .fa-moon{background:transparent;color:var(--text-muted)}
-        .menu-toggle{display:none;flex-direction:column;cursor:pointer;gap:5px;padding:0.5rem}
-        .menu-toggle span{width:25px;height:2px;background:var(--accent);border-radius:2px}
-        .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 4rem}
-        .hero-content{text-align:center;z-index:1;max-width:900px}
-        .hero-image{width:180px;height:180px;border-radius:50%;margin:0 auto 2rem;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:4rem;box-shadow:0 0 60px var(--accent-glow);animation:float 6s ease-in-out infinite;border:4px solid var(--accent);position:relative;overflow:hidden;color:white}
-        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1rem;font-weight:700}
-        .hero h1 span{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero .subtitle{font-size:1.3rem;color:var(--text-secondary);margin-bottom:1rem}
-        .hero .location{font-size:1rem;color:var(--text-muted);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:0.5rem}
-        .hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .btn{padding:1rem 2rem;border-radius:12px;font-size:1rem;font-weight:600;text-decoration:none;transition:all 0.3s ease;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:0.5rem}
-        .btn-primary{background:var(--gradient-primary);color:white;box-shadow:0 10px 40px var(--accent-glow)}
-        .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 50px var(--accent-glow)}
-        .btn-secondary{background:transparent;color:var(--text-primary);border:2px solid var(--accent)}
-        .btn-secondary:hover{background:var(--accent);color:white;transform:translateY(-3px)}
-        section{padding:6rem 2rem;max-width:1400px;margin:0 auto}
-        .section-title{font-family:'Playfair Display',serif;font-size:2.5rem;text-align:center;margin-bottom:1rem}
-        .section-title span{background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .section-subtitle{text-align:center;color:var(--text-secondary);margin-bottom:4rem;font-size:1.1rem}
-        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-        .about-text p{margin-bottom:1.5rem;font-size:1.1rem;color:var(--text-secondary)}
-        .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
-        .stat{text-align:center;padding:1.5rem;background:var(--card-bg);border-radius:16px;border:1px solid var(--border);transition:all 0.3s ease}
-        .stat:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(99,102,241,0.15)}
-        .stat-number{font-size:2.2rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif}
-        .stat-label{font-size:0.85rem;color:var(--text-muted);margin-top:0.3rem}
-        .about-image-wrapper{background:var(--gradient-primary);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden}
-        .tech-stack{display:flex;flex-wrap:wrap;gap:0.8rem;position:relative;z-index:1}
-        .tech-item{background:rgba(255,255,255,0.2);padding:0.6rem 1.2rem;border-radius:30px;font-weight:500;font-size:0.9rem;color:white;transition:transform 0.3s ease}
-        .tech-item:hover{transform:scale(1.05)}
-        .timeline{position:relative;max-width:900px;margin:0 auto}
-        .timeline::before{content:'';position:absolute;left:50%;transform:translateX(-50%);width:3px;height:100%;background:var(--gradient-primary);border-radius:3px}
-        .timeline-item{display:flex;justify-content:flex-end;padding-right:calc(50% + 30px);position:relative;margin-bottom:3rem}
-        .timeline-item:nth-child(even){justify-content:flex-start;padding-right:0;padding-left:calc(50% + 30px)}
-        .timeline-content{background:var(--card-bg);padding:2rem;border-radius:16px;border:1px solid var(--border);transition:all 0.3s ease;backdrop-filter:blur(10px)}
-        .timeline-content:hover{transform:translateY(-5px);box-shadow:0 20px 40px var(--accent-glow);border-color:var(--accent)}
-        .timeline-dot{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;background:var(--accent);border-radius:50%;border:4px solid var(--primary);z-index:1;box-shadow:0 0 20px var(--accent-glow)}
-        .timeline-date{color:var(--accent-light);font-weight:600;margin-bottom:0.5rem;font-size:0.9rem}
-        .timeline-title{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.5rem;color:var(--text-primary)}
-        .timeline-company{color:var(--accent);margin-bottom:0.8rem;font-weight:500}
-        .timeline-desc{color:var(--text-secondary);font-size:0.95rem}
-        .timeline-grade{display:inline-block;background:var(--accent-glow);color:var(--accent-light);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.85rem;margin-top:0.8rem}
-        .skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
-        .skill-category{background:var(--card-bg);padding:2rem;border-radius:20px;border:1px solid var(--border);backdrop-filter:blur(10px);transition:all 0.3s ease}
-        .skill-category:hover{border-color:var(--accent);box-shadow:0 20px 40px var(--accent-glow)}
-        .skill-category h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem}
-        .skill-category h3 i{color:var(--accent)}
-        .skill-item{margin-bottom:1.3rem}
-        .skill-header{display:flex;justify-content:space-between;margin-bottom:0.5rem}
-        .skill-name{font-weight:500;color:var(--text-primary)}
-        .skill-level{color:var(--accent-light);font-weight:600}
-        .skill-bar{height:8px;background:var(--tertiary);border-radius:10px;overflow:hidden}
-        .skill-progress{height:100%;background:var(--gradient-primary);border-radius:10px;transition:width 1.5s ease}
-        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
-        .project-card{background:var(--card-bg);border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all 0.4s ease;backdrop-filter:blur(10px)}
-        .project-card:hover{transform:translateY(-10px);box-shadow:0 30px 60px var(--accent-glow);border-color:var(--accent)}
-        .project-image{height:180px;display:flex;align-items:center;justify-content:center;font-size:4rem;color:white}
-        .project-content{padding:1.8rem}
-        .project-title{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.8rem;color:var(--text-primary)}
-        .project-desc{color:var(--text-secondary);margin-bottom:1.2rem;font-size:0.95rem}
-        .project-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
-        .project-tag{background:var(--accent-glow);color:var(--accent-light);padding:0.4rem 0.9rem;border-radius:20px;font-size:0.8rem;font-weight:500}
-        .publications-list{max-width:900px;margin:0 auto}
-        .publication-item{background:var(--card-bg);padding:2rem;border-radius:16px;margin-bottom:1.5rem;border-left:4px solid var(--accent);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:all 0.3s ease;backdrop-filter:blur(10px)}
-        .publication-item:hover{transform:translateX(10px);box-shadow:0 15px 40px var(--accent-glow)}
-        .publication-title{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:0.5rem;color:var(--text-primary)}
-        .publication-meta{color:var(--accent-light);font-size:0.9rem;margin-bottom:0.8rem}
-        .publication-desc{color:var(--text-secondary);font-size:0.95rem}
-        .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;max-width:1000px;margin:0 auto}
-        .award-card{background:var(--card-bg);padding:2rem;border-radius:16px;border:1px solid var(--border);text-align:center;transition:all 0.3s ease;backdrop-filter:blur(10px)}
-        .award-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px var(--accent-glow);border-color:var(--accent)}
-        .award-icon{font-size:3rem;margin-bottom:1rem}
-        .award-title{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:0.5rem;color:var(--text-primary)}
-        .award-year{color:var(--accent-light);font-weight:600}
-        #contact{background:var(--card-bg);border-radius:30px;margin:4rem auto;padding:4rem;border:1px solid var(--border);backdrop-filter:blur(10px)}
-        .contact-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
-        .contact-info h3{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1.5rem}
-        .contact-info p{color:var(--text-secondary);margin-bottom:2rem}
-        .contact-links{display:flex;flex-direction:column;gap:1rem}
-        .contact-link{display:flex;align-items:center;gap:1rem;color:var(--text-primary);text-decoration:none;padding:1rem 1.5rem;background:var(--tertiary);border-radius:12px;border:1px solid var(--border);transition:all 0.3s ease}
-        .contact-link:hover{background:var(--accent);color:white;transform:translateX(10px);border-color:var(--accent)}
-        .contact-link i{font-size:1.3rem;width:24px;color:var(--accent)}
-        .contact-link:hover i{color:white}
-        .contact-form{display:flex;flex-direction:column;gap:1.2rem}
-        .form-group input,.form-group textarea{width:100%;padding:1rem 1.2rem;background:var(--tertiary);border:2px solid var(--border);border-radius:12px;color:var(--text-primary);font-family:inherit;font-size:1rem;transition:all 0.3s ease}
-        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 20px var(--accent-glow)}
-        .form-group textarea{min-height:140px;resize:vertical}
-        footer{text-align:center;padding:3rem 2rem;color:var(--text-muted);border-top:1px solid var(--border)}
-        .social-links{display:flex;justify-content:center;gap:1rem;margin-bottom:2rem}
-        .social-link{width:50px;height:50px;border-radius:50%;background:var(--tertiary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-primary);text-decoration:none;font-size:1.2rem;transition:all 0.3s ease}
-        .social-link:hover{background:var(--gradient-primary);border-color:var(--accent);transform:translateY(-5px);box-shadow:0 10px 30px var(--accent-glow)}
-        @media(max-width:992px){.about-grid,.contact-content{grid-template-columns:1fr;gap:3rem}.timeline::before{left:20px}.timeline-item,.timeline-item:nth-child(even){padding-left:55px;padding-right:0;justify-content:flex-start}.timeline-dot{left:20px}}
-        @media(max-width:768px){.nav-links{position:fixed;top:65px;left:0;right:0;background:var(--primary);flex-direction:column;padding:1.5rem;gap:0.5rem;transform:translateY(-150%);transition:transform 0.3s ease;border-bottom:1px solid var(--border)}.nav-links.active{transform:translateY(0)}.menu-toggle{display:flex}.nav-right{gap:1rem}.hero h1{font-size:2rem}.about-stats{grid-template-columns:1fr}.skills-container,.projects-grid{grid-template-columns:1fr}#contact{padding:2rem;margin:2rem 1rem}section{padding:4rem 1.5rem}}
-        .fade-in{opacity:0;transform:translateY(30px);transition:all 0.6s ease}
-        .fade-in.visible{opacity:1;transform:translateY(0)}
-    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="bg-animation"></div>
+    
+    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">JR.EDOU</div>
@@ -157,35 +49,56 @@
         </div>
     </nav>
 
+    <!-- Hero Section - Photo Left, Text Right -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-image"><i class="fas fa-user-graduate"></i></div>
-            <h1>Hi, I'm <span>Josué Romaric EDOU</span></h1>
-            <p class="subtitle">AI Engineer | Data Scientist | Machine Learning Enthusiast</p>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Muizenberg, Cape Town, South Africa</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="Josue_Romaric_EDOU_Resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download CV</a>
+            <div class="hero-left">
+                <div class="hero-image">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1>Hi, I'm <span>Josué Romaric EDOU</span></h1>
+                <p class="subtitle">AI Engineer | Data Scientist | Machine Learning Enthusiast</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Muizenberg, Cape Town, South Africa</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+                    <a href="Josue_Romaric_EDOU_Resume.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download CV</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section - Image Left, Text Right -->
     <section id="about" class="fade-in">
         <h2 class="section-title">About <span>Me</span></h2>
         <p class="section-subtitle">Passionate about AI and Innovation</p>
         <div class="about-grid">
+            <div class="about-image-wrapper">
+                <i class="fas fa-brain"></i>
+            </div>
             <div class="about-text">
                 <p>I am passionate about artificial intelligence and machine learning. I have developed skills in modeling and programming that have led me to data science with exploration in computer vision.</p>
                 <p>I enjoy sharing my knowledge and experiences to promote collaboration and learning. Driven by innovation, I am committed to creating intelligent solutions through applied research.</p>
                 <p>Currently pursuing my Master's degree in Artificial Intelligence for Science at AIMS South Africa.</p>
+                
                 <div class="about-stats">
-                    <div class="stat"><div class="stat-number">3+</div><div class="stat-label">Years Experience</div></div>
-                    <div class="stat"><div class="stat-number">5+</div><div class="stat-label">Research Projects</div></div>
-                    <div class="stat"><div class="stat-number">78%</div><div class="stat-label">Engineering Grade</div></div>
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Research Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">78%</div>
+                        <div class="stat-label">Engineering Grade</div>
+                    </div>
                 </div>
-            </div>
-            <div class="about-image">
-                <div class="about-image-wrapper">
+                
+                <div class="tech-stack-section">
+                    <h4>Tech Stack</h4>
                     <div class="tech-stack">
                         <span class="tech-item">Python</span>
                         <span class="tech-item">C</span>
@@ -203,6 +116,7 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="fade-in">
         <h2 class="section-title">Professional <span>Experience</span></h2>
         <p class="section-subtitle">My career journey</p>
@@ -237,6 +151,7 @@
         </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education" class="fade-in">
         <h2 class="section-title">My <span>Education</span></h2>
         <p class="section-subtitle">Academic background</p>
@@ -273,76 +188,205 @@
         </div>
     </section>
 
+    <!-- Skills Section - Smaller Cards -->
     <section id="skills" class="fade-in">
         <h2 class="section-title">My <span>Skills</span></h2>
         <p class="section-subtitle">Technical expertise</p>
         <div class="skills-container">
             <div class="skill-category">
                 <h3><i class="fas fa-code"></i> Programming</h3>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Python</span><span class="skill-level">90%</span></div><div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">C Programming</span><span class="skill-level">78%</span></div><div class="skill-bar"><div class="skill-progress" style="width:78%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">SQL</span><span class="skill-level">80%</span></div><div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">C Programming</span>
+                        <span class="skill-level">78%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 78%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
             </div>
+            
             <div class="skill-category">
                 <h3><i class="fas fa-brain"></i> AI & Data Science</h3>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Machine Learning</span><span class="skill-level">85%</span></div><div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Computer Vision</span><span class="skill-level">85%</span></div><div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Statistical Modeling</span><span class="skill-level">88%</span></div><div class="skill-bar"><div class="skill-progress" style="width:88%"></div></div></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Machine Learning</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Computer Vision</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Statistical Modeling</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
             </div>
+            
             <div class="skill-category">
                 <h3><i class="fas fa-calculator"></i> Mathematics</h3>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Numerical Modeling</span><span class="skill-level">90%</span></div><div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Optimization</span><span class="skill-level">85%</span></div><div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Time Series</span><span class="skill-level">79%</span></div><div class="skill-bar"><div class="skill-progress" style="width:79%"></div></div></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Numerical Modeling</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Optimization</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Time Series</span>
+                        <span class="skill-level">79%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 79%"></div>
+                    </div>
+                </div>
             </div>
+            
             <div class="skill-category">
                 <h3><i class="fas fa-tools"></i> Tools</h3>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">MATLAB</span><span class="skill-level">85%</span></div><div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">Git & GitHub</span><span class="skill-level">82%</span></div><div class="skill-bar"><div class="skill-progress" style="width:82%"></div></div></div>
-                <div class="skill-item"><div class="skill-header"><span class="skill-name">LaTeX</span><span class="skill-level">88%</span></div><div class="skill-bar"><div class="skill-progress" style="width:88%"></div></div></div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">MATLAB</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-level">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">LaTeX</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section - Smaller Cards -->
     <section id="projects" class="fade-in">
         <h2 class="section-title">Research <span>Projects</span></h2>
         <p class="section-subtitle">Contributions and innovations</p>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-seedling"></i></div>
+                <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6)">
+                    <i class="fas fa-seedling"></i>
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">Intelligent Fertigation System</h3>
                     <p class="project-desc">Design of an intelligent fertigation system for greenhouse crops using humidity sensors.</p>
-                    <div class="project-tags"><span class="project-tag">IoT</span><span class="project-tag">Sensors</span><span class="project-tag">Agriculture</span></div>
+                    <div class="project-tags">
+                        <span class="project-tag">IoT</span>
+                        <span class="project-tag">Sensors</span>
+                        <span class="project-tag">Agriculture</span>
+                    </div>
                 </div>
             </div>
+            
             <div class="project-card">
-                <div class="project-image" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fas fa-cubes"></i></div>
+                <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #ef4444)">
+                    <i class="fas fa-cubes"></i>
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">B-spline Surfaces Generation</h3>
-                    <p class="project-desc">Generation of B-spline Surfaces for mechanical structure simulation. Published research (ISSN: 2347-2529).</p>
-                    <div class="project-tags"><span class="project-tag">B-spline</span><span class="project-tag">CAD</span><span class="project-tag">Simulation</span></div>
+                    <p class="project-desc">Generation of B-spline Surfaces for mechanical structure simulation. Published research.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">B-spline</span>
+                        <span class="project-tag">CAD</span>
+                        <span class="project-tag">Simulation</span>
+                    </div>
                 </div>
             </div>
+            
             <div class="project-card">
-                <div class="project-image" style="background:linear-gradient(135deg,#10b981,#3b82f6)"><i class="fas fa-wave-square"></i></div>
+                <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3b82f6)">
+                    <i class="fas fa-wave-square"></i>
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">2D Wave Propagation</h3>
                     <p class="project-desc">Solving 2D Wave Propagation Equation using Finite Element Method (FEM) with Python.</p>
-                    <div class="project-tags"><span class="project-tag">FEM</span><span class="project-tag">Python</span><span class="project-tag">PDE</span></div>
+                    <div class="project-tags">
+                        <span class="project-tag">FEM</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">PDE</span>
+                    </div>
                 </div>
             </div>
+            
             <div class="project-card">
-                <div class="project-image" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)"><i class="fas fa-robot"></i></div>
+                <div class="project-image" style="background: linear-gradient(135deg, #ec4899, #8b5cf6)">
+                    <i class="fas fa-robot"></i>
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">AI Hackathon Projects</h3>
-                    <p class="project-desc">Benin Multimodal AI Hackathon, ASEAN Data Science Explorer, Amnesty International Hackathon.</p>
-                    <div class="project-tags"><span class="project-tag">AI</span><span class="project-tag">Hackathon</span><span class="project-tag">Innovation</span></div>
+                    <p class="project-desc">Benin Multimodal AI Hackathon, ASEAN Data Science Explorer, Amnesty International.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">Hackathon</span>
+                        <span class="project-tag">Innovation</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Publications Section -->
     <section id="publications" class="fade-in">
         <h2 class="section-title">My <span>Publications</span></h2>
         <p class="section-subtitle">Research contributions</p>
@@ -365,16 +409,30 @@
         </div>
     </section>
 
+    <!-- Awards Section - Smaller Cards -->
     <section id="awards" class="fade-in">
         <h2 class="section-title">Awards & <span>Achievements</span></h2>
         <p class="section-subtitle">Recognition of excellence</p>
         <div class="awards-grid">
-            <div class="award-card"><div class="award-icon">🏆</div><h3 class="award-title">Excellence Award - Silk Road and Belt Initiative</h3><div class="award-year">2nd Edition - January 2024</div></div>
-            <div class="award-card"><div class="award-icon">🥈</div><h3 class="award-title">2nd in Mathematical Engineering and Modeling</h3><div class="award-year">2022-2023</div></div>
-            <div class="award-card"><div class="award-icon">🎯</div><h3 class="award-title">Finalist - Amnesty International Hackathon</h3><div class="award-year">Wayimi Team - 2023</div></div>
+            <div class="award-card">
+                <div class="award-icon">🏆</div>
+                <h3 class="award-title">Excellence Award - Silk Road and Belt Initiative</h3>
+                <div class="award-year">2nd Edition - January 2024</div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon">🥈</div>
+                <h3 class="award-title">2nd in Mathematical Engineering and Modeling</h3>
+                <div class="award-year">2022-2023</div>
+            </div>
+            <div class="award-card">
+                <div class="award-icon">🎯</div>
+                <h3 class="award-title">Finalist - Amnesty International Hackathon</h3>
+                <div class="award-year">Wayimi Team - 2023</div>
+            </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <p class="section-subtitle">Let's work together</p>
@@ -383,52 +441,64 @@
                 <h3>Let's Connect</h3>
                 <p>I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out!</p>
                 <div class="contact-links">
-                    <a href="mailto:josue@aims.ac.za" class="contact-link"><i class="fas fa-envelope"></i><span>josue@aims.ac.za</span></a>
-                    <a href="tel:+27718188884" class="contact-link"><i class="fas fa-phone"></i><span>+27 71 818 8884</span></a>
-                    <a href="#" class="contact-link"><i class="fas fa-map-marker-alt"></i><span>Muizenberg, Cape Town, South Africa</span></a>
+                    <a href="mailto:josueedou@example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>josueedou@example.com</span>
+                    </a>
+                    <a href="tel:+27718188884" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+27 71 818 8884</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Muizenberg, Cape Town, South Africa</span>
+                    </a>
                 </div>
             </div>
             <form class="contact-form" id="contactForm">
-                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                <div class="form-group"><input type="email" placeholder="Your Email" required></div>
-                <div class="form-group"><input type="text" placeholder="Subject"></div>
-                <div class="form-group"><textarea placeholder="Your Message" required></textarea></div>
-                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
             </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://github.com/" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/" class="social-link" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:josue@aims.ac.za" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.researchgate.net/" class="social-link" title="ResearchGate" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://github.com/" class="social-link" title="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/" class="social-link" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/" class="social-link" title="Twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:josueedou@example.com" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.researchgate.net/" class="social-link" title="ResearchGate" target="_blank">
+                <i class="fab fa-researchgate"></i>
+            </a>
         </div>
         <p>© 2025 Josué Romaric EDOU. All rights reserved.</p>
-        <p style="margin-top:0.5rem;font-size:0.9rem">Made with <span style="color:var(--accent)">❤</span> and ☕</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem">Made with <span style="color: var(--accent)">❤</span> and ☕</p>
     </footer>
 
-    <script>
-        const themeToggle=document.getElementById('themeToggle');
-        const html=document.documentElement;
-        const savedTheme=localStorage.getItem('theme')||'dark';
-        html.setAttribute('data-theme',savedTheme);
-        themeToggle.addEventListener('click',()=>{
-            const currentTheme=html.getAttribute('data-theme');
-            const newTheme=currentTheme==='dark'?'light':'dark';
-            html.setAttribute('data-theme',newTheme);
-            localStorage.setItem('theme',newTheme);
-        });
-        const menuToggle=document.getElementById('menuToggle');
-        const navLinks=document.getElementById('navLinks');
-        menuToggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
-        document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('active')})});
-        window.addEventListener('scroll',()=>{const nav=document.querySelector('nav');if(window.scrollY>50){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}});
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
-        document.querySelectorAll('.fade-in').forEach(el=>{observer.observe(el)});
-        document.getElementById('contactForm').addEventListener('submit',(e)=>{e.preventDefault();alert('Thank you for your message!');e.target.reset()});
-    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

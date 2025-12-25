@@ -537,10 +537,13 @@ section {
 ======================================== */
 .timeline {
     position: relative;
-    max-width: 900px;
+    width: 80%;
+    max-width: none;
+    /* max-width: 900px; */
     margin: 0 auto;
     padding-left: 40px; /* espace pour la ligne */
 }
+
 
 /* Ligne verticale à gauche */
 .timeline::before {

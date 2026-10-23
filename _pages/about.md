@@ -1,13 +1,13 @@
----
+<img width="1381" height="710" alt="image" src="https://github.com/user-attachments/assets/3e63e9bc-02df-4cb5-b2ca-a888ba99cc97" />---
 layout: about
 title: Home
 permalink: /
 subtitle:
 
-profile:
+<!--profile:
   align: left
   image: Josue.jpeg
-  image_circular: false # crops the image to make it circular
+  image_circular: false # crops the image to make it circular -->
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -51,7 +51,7 @@ latest_posts:
       <a class="hero-btn primary" href="{{ '/cv/' | relative_url }}"><i class="fa-solid fa-file-lines"></i> CV</a>
       <a class="hero-btn" href="https://scholar.google.com/?authuser=2" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
       <a class="hero-btn" href="https://github.com/josue-do-it" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a class="hero-btn" href="https://www.linkedin.com/in/romaricedou/"_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+      <a class="hero-btn" href="https://www.linkedin.com/in/romaricedou/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
       <a class="hero-btn" href="mailto:josue@aims.ac.za"><i class="fa-regular fa-envelope"></i> Email</a>
     </div>
   </div>

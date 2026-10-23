@@ -34,6 +34,15 @@ latest_posts:
 .hero-btn.primary { background: var(--global-theme-color); color: #fff !important; }
 .hero-btn i { color: var(--global-theme-color); }
 .hero-btn:hover i, .hero-btn.primary i { color: #fff; }
+@media (max-width: 600px) {
+  .hero-card { padding: 1.2rem; gap: 1.2rem; justify-content: center; text-align: center; }
+  .hero-photo { width: 150px; height: 165px; }
+  .hero-name { font-size: 1.8rem; }
+  .hero-role { font-size: 1rem; }
+  .hero-text { min-width: 0; width: 100%; }
+  .hero-buttons { justify-content: center; gap: 0.5rem; }
+  .hero-btn { padding: 0.35rem 0.9rem; font-size: 0.9rem; }
+}
 </style>
 <div class="hero-card">
   <img class="hero-photo" src="{{ '/assets/img/Josue.jpeg' | relative_url }}" alt="Josué R. Edou">

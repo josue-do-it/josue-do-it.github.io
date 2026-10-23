@@ -52,13 +52,16 @@ latest_posts:
 .hero-btn i { color: var(--global-theme-color); }
 .hero-btn:hover i, .hero-btn.primary i { color: #fff; }
 @media (max-width: 600px) {
-  .hero-card { padding: 1.2rem; gap: 1.2rem; justify-content: center; text-align: center; }
-  .hero-photo { width: 150px; height: 165px; }
-  .hero-name { font-size: 1.8rem; }
-  .hero-role { font-size: 1rem; }
-  .hero-text { min-width: 0; width: 100%; }
-  .hero-buttons { justify-content: center; gap: 0.5rem; }
-  .hero-btn { padding: 0.35rem 0.9rem; font-size: 0.9rem; }
+  .hero-card { flex-direction: column; align-items: center; text-align: center; padding: 1.2rem; gap: 1rem; }
+  .hero-photo { width: 140px; height: 155px; flex: none; }
+  .hero-text { flex: none; width: 100%; min-width: 0; }
+  .hero-name { font-size: 1.6rem; }
+  .hero-role { font-size: 0.95rem; }
+  .hero-tagline { font-size: 0.9rem; }
+  .hero-buttons { justify-content: center; gap: 0.4rem; }
+  .hero-btn { padding: 0.25rem 0.7rem; font-size: 0.78rem; }
+
+  .news-list li { flex-direction: column; gap: 0.2rem; }
 }
 </style>
 <div class="hero-card">

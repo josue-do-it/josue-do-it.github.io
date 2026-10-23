@@ -18,15 +18,32 @@ latest_posts:
 ---
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 .post-header { display: none !important; }
-.post > article > h2, .post h2 { border-bottom: none !important; }
-.news-list li { border-bottom: none !important; }
+
+.post { font-family: 'Inter', 'Roboto', sans-serif; font-size: 0.95rem; }
+.post p, .post li { font-weight: 400; line-height: 1.7; }
+
+/* Titres avec trait de séparation */
+.post h2 { font-size: 1.5rem; font-weight: 600; padding-bottom: 0.4rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid var(--global-divider-color) !important; }
+
+/* Research Interests en chips */
+.interests-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.interests-list li { background: #f0f6ff; border: 1px solid #cfe0fb; color: #1e3a8a; border-radius: 8px; padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 500; line-height: 1.4; }
+  border-radius: 8px; padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 500; line-height: 1.4; }
+
+/* News avec trait entre chaque ligne */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li { padding: 0.8rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.news-list li:last-child { border-bottom: none; }
+.news-date { display: inline-block; min-width: 7rem; font-weight: 600; }
+
 .hero-card { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; border: 1px solid var(--global-divider-color); border-radius: 20px; padding: 2rem; margin: 0 0 2rem 0; background: var(--global-card-bg-color); }
 .hero-photo { width: 200px; height: 220px; object-fit: cover; border: 4px solid var(--global-theme-color); border-radius: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 .hero-text { flex: 1; min-width: 260px; }
-.hero-name { font-size: 2.4rem; font-weight: 700; line-height: 1.15; margin: 0 0 0.5rem 0; }
+.hero-name { font-size: 2rem; font-weight: 700; line-height: 1.15; margin: 0 0 0.5rem 0; }
 .hero-name span { color: var(--global-theme-color); }
-.hero-role { color: var(--global-theme-color); font-weight: 700; font-size: 1.15rem; margin: 0 0 0.75rem 0; }
+.hero-role { color: var(--global-theme-color); font-weight: 700; font-size: 1rem; margin: 0 0 0.75rem 0; }
 .hero-tagline { color: var(--global-text-color-light); margin: 0 0 1.2rem 0; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .hero-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 1.1rem; border: 1px solid var(--global-theme-color); border-radius: 999px; color: var(--global-text-color) !important; font-weight: 600; text-decoration: none !important; }
@@ -99,6 +116,8 @@ latest_posts:
 </div>
 
 <!-- <h2>About</h2>
+.post > article > h2, .post h2 { border-bottom: none !important; }
+.news-list li { border-bottom: none !important; }
 <p>
   I am an aspiring AI researcher with interests in computer vision, probabilistic machine learning, generative modeling, and computational neuroscience. I completed my Master's in Artificial Intelligence for Sciences at the African Institute of Mathematical Sciences (AIMS) in Cape Town, South Africa, where my thesis focused on robust full-body 3D human pose estimation.
 </p>

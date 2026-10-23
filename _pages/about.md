@@ -1,13 +1,7 @@
-<img width="1381" height="710" alt="image" src="https://github.com/user-attachments/assets/3e63e9bc-02df-4cb5-b2ca-a888ba99cc97" />---
+---
 layout: about
 title: Home
 permalink: /
-subtitle:
-
-<!--profile:
-  align: left
-  image: Josue.jpeg
-  image_circular: false # crops the image to make it circular -->
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -168,8 +162,11 @@ latest_posts:
         Awarded DeepMind Scholarship for Master's program at AIMS
       </li>
     </ul>
+<!--profile:
+  align: left
+  image: Josue.jpeg
+  image_circular: false # crops the image to make it circular 
+   
 
-    -->
 
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->

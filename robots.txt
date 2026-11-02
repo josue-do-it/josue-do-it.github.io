@@ -1,4 +1,1 @@
-User-agent: *
-Disallow:
-
 Sitemap: https://josue-do-it.github.io/sitemap.xml

@@ -4,17 +4,15 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Josué
-middle_name: R.
+middle_name: Romaric
 last_name: Edou
 contact_note: >
   Best way to reach me is by email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   MSc AI for Science student at AIMS South Africa. Research in computer vision, NLP and applied machine learning.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: computer vision, NLP, machine learning, 6D pose estimation, academic-website # add your own keywords or leave empty
+  All rights reserved.
+keywords: computer vision, 6D pose estimation, robotics, LLM, machine learning
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ▫️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
@@ -136,8 +134,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Blog # blog_name will be displayed in your blog page
+blog_description: Thoughts, research notes, and articles.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -478,7 +476,7 @@ enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (htt
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
-enable_darkmode: false # enables switching between light/dark modes
+enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
@@ -546,7 +544,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@100;300;400;500;700&display=swap"
   highlightjs:
     integrity:
       css:

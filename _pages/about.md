@@ -4,72 +4,33 @@ title: Home
 permalink: /
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: false        # includes social icons at the bottom of the page
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-.post-header { display: none !important; }
-
-.post { font-family: 'Inter', 'Roboto', sans-serif; font-size: 0.95rem; }
-.post p, .post li { font-weight: 400; line-height: 1.7; }
-
-/* Titres avec trait de séparation */
-.post h2 { font-size: 1.5rem; font-weight: 600; padding-bottom: 0.4rem; margin: 2rem 0 1rem 0; border-bottom: 1px solid var(--global-divider-color) !important; }
-
-/* Research Interests en chips */
-.interests-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.interests-list li { background: #f0f6ff; border: 1px solid #cfe0fb; color: #1e3a8a; border-radius: 8px; padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 500; line-height: 1.4; }
-  border-radius: 8px; padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 500; line-height: 1.4; }
-
-/* News avec trait entre chaque ligne */
-.news-list { list-style: none; padding: 0; margin: 0; }
-.news-list li { padding: 0.8rem 0; border-bottom: 1px solid var(--global-divider-color); }
-.news-list li:last-child { border-bottom: none; }
-.news-date { display: inline-block; min-width: 7rem; font-weight: 600; }
-
-.hero-card { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; border: 1px solid var(--global-divider-color); border-radius: 20px; padding: 2rem; margin: 0 0 2rem 0; background: var(--global-card-bg-color); }
-.hero-photo { width: 200px; height: 220px; object-fit: cover; border: 4px solid var(--global-theme-color); border-radius: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-.hero-text { flex: 1; min-width: 260px; }
-.hero-name { font-size: 2rem; font-weight: 700; line-height: 1.15; margin: 0 0 0.5rem 0; }
-.hero-name span { color: var(--global-theme-color); }
-.hero-role { color: var(--global-theme-color); font-weight: 700; font-size: 1rem; margin: 0 0 0.75rem 0; }
-.hero-tagline { color: var(--global-text-color-light); margin: 0 0 1.2rem 0; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.hero-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 1.1rem; border: 1px solid var(--global-theme-color); border-radius: 999px; color: var(--global-text-color) !important; font-weight: 600; text-decoration: none !important; }
-.hero-btn:hover { background: var(--global-theme-color); color: #fff !important; }
-.hero-btn.primary { background: var(--global-theme-color); color: #fff !important; }
-.hero-btn i { color: var(--global-theme-color); }
-.hero-btn:hover i, .hero-btn.primary i { color: #fff; }
-@media (max-width: 600px) {
-  .hero-card { flex-direction: column; align-items: center; text-align: center; padding: 1.2rem; gap: 1rem; }
-  .hero-photo { width: 140px; height: 155px; flex: none; }
-  .hero-text { flex: none; width: 100%; min-width: 0; }
-  .hero-name { font-size: 1.6rem; }
-  .hero-role { font-size: 0.95rem; }
-  .hero-tagline { font-size: 0.9rem; }
-  .hero-buttons { justify-content: center; gap: 0.4rem; }
-  .hero-btn { padding: 0.25rem 0.7rem; font-size: 0.78rem; }
-
-  .news-list li { flex-direction: column; gap: 0.2rem; }
-}
-</style>
 <div class="hero-card">
   <img class="hero-photo" src="{{ '/assets/img/Josue.jpeg' | relative_url }}" alt="Josué R. Edou">
   <div class="hero-text">
     <h1 class="hero-name">Josué Romaric <span>Edou</span></h1>
-    <p class="hero-role">AI Researcher · Google DeepMind Scholar, African Institute for Mathematical Sciences (AIMS)</p>
-    <p class="hero-tagline">I work on computer vision, Large Language Models and robotics, with a focus on reliable representations from complex data.</p>
+    <p class="hero-role"
+       data-i18n
+       data-en="AI Researcher & Engineer · Google DeepMind Scholar, African Institute for Mathematical Sciences (AIMS)"
+       data-fr="Chercheur en IA & Ingénieur · Boursier Google DeepMind, Institut Africain des Sciences Mathématiques (AIMS)"
+    >AI Researcher & Engineer · Google DeepMind Scholar, African Institute for Mathematical Sciences (AIMS)</p>
+    <p class="hero-tagline"
+       data-i18n
+       data-en="I work on computer vision, Large Language Models and robotics."
+       data-fr="Je travaille sur la vision par ordinateur, les grands modèles de langage et la robotique."
+    >I work on computer vision, Large Language Models and robotics.</p>
     <div class="hero-buttons">
       <a class="hero-btn primary" href="{{ '/cv/' | relative_url }}"><i class="fa-solid fa-file-lines"></i> CV</a>
       <a class="hero-btn" href="https://scholar.google.com/?authuser=2" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
@@ -80,124 +41,88 @@ latest_posts:
   </div>
 </div>
 
-<h2>About</h2>
-<p>
-  I am an aspiring AI researcher with interests in computer vision, probabilistic machine learning, generative modelling, and computational neuroscience. I completed my Master's in Artificial Intelligence for Sciences at the African Institute for Mathematical Sciences (AIMS) in Cape Town, South Africa, where my thesis focused on open-vocabulary 6D object pose estimation.
-</p>
-<p>
-  My work is grounded in strong mathematical foundations and practical experience with PyTorch, TensorFlow, and scientific computing. I am particularly interested in learning reliable representations from complex data, with applications spanning visual perception, generative models, and neural data analysis.
-</p>
+<h2 data-i18n data-en="About" data-fr="À propos">About</h2>
+
+<p data-i18n
+   data-en="I am Josué Romaric Edou, from Benin, West Africa. I am a Google DeepMind Scholar, early in my research career in artificial intelligence, and I am looking for a PhD position. My research interests are computer vision, large language models and robotics, and machine learning with applications spanning visual perception and generative models."
+   data-fr="Je suis Josué Romaric Edou, originaire du Bénin, en Afrique de l'Ouest. Je suis boursier Google DeepMind, en début de carrière dans la recherche en intelligence artificielle, et je suis à la recherche d'un poste de doctorat. Mes intérêts de recherche portent sur la vision par ordinateur, les grands modèles de langage, la robotique et l'apprentissage automatique, avec des applications en perception visuelle et en modèles génératifs."
+>I am Josué Romaric Edou, from Benin, West Africa. I am a Google DeepMind Scholar, early in my research career in artificial intelligence, and I am looking for a PhD position. My research interests are computer vision, large language models and robotics, and machine learning with applications spanning visual perception and generative models.</p>
+
+<p data-i18n
+   data-en='I recently completed my MSc in Artificial Intelligence for Science at the African Institute for Mathematical Sciences (AIMS) in Cape Town, South Africa. My thesis focused on model-free, open-vocabulary 6D pose estimation. The idea is simple: we developed a pipeline that detects an object it has never seen before and estimates its 6D pose from a natural-language description. The object is first extracted from the human context using Llama&nbsp;3.2. The pipeline is used for robotic grasping. <a href="https://josue-do-it.github.io/lang6d-pose-yoloe/" class="inline-link">Thesis&nbsp;→</a>'
+   data-fr='J&apos;ai récemment obtenu mon MSc en Intelligence Artificielle pour les Sciences à l&apos;Institut Africain des Sciences Mathématiques (AIMS) au Cap, en Afrique du Sud. Ma thèse portait sur l&apos;estimation de pose 6D sans modèle et en vocabulaire ouvert. L&apos;idée est simple : nous avons développé un pipeline qui détecte un objet qu&apos;il n&apos;a jamais vu et estime sa pose 6D à partir d&apos;une description en langage naturel. L&apos;objet est d&apos;abord extrait du contexte humain via Llama&nbsp;3.2. Le pipeline est utilisé pour la saisie robotique. <a href="https://josue-do-it.github.io/lang6d-pose-yoloe/" class="inline-link">Thèse&nbsp;→</a>'
+>I recently completed my MSc in Artificial Intelligence for Science at the African Institute for Mathematical Sciences (AIMS) in Cape Town, South Africa. My thesis focused on model-free, open-vocabulary 6D pose estimation. The idea is simple: we developed a pipeline that detects an object it has never seen before and estimates its 6D pose from a natural-language description. The object is first extracted from the human context using Llama&nbsp;3.2. The pipeline is used for robotic grasping. <a href="https://josue-do-it.github.io/lang6d-pose-yoloe/" class="inline-link">Thesis&nbsp;→</a></p>
+
+<p data-i18n
+   data-en="Before my MSc, I earned an engineer's degree in Mathematical Engineering and Modelling in Benin, which gave me a strong mathematical foundation and practical experience with PyTorch, TensorFlow and scientific computing. Before starting my research career, I worked as an AI Engineer in Benin. I am open to research opportunities!"
+   data-fr="Avant mon MSc, j'ai obtenu un diplôme d'ingénieur en Génie Mathématique et Modélisation au Bénin, ce qui m'a doté de solides bases mathématiques et d'une expérience pratique avec PyTorch, TensorFlow et le calcul scientifique. Avant de débuter ma carrière de chercheur, j'ai travaillé comme Ingénieur IA au Bénin. Je suis ouvert aux opportunités de recherche !"
+>Before my MSc, I earned an engineer's degree in Mathematical Engineering and Modelling in Benin, which gave me a strong mathematical foundation and practical experience with PyTorch, TensorFlow and scientific computing. Before starting my research career, I worked as an AI Engineer in Benin. I am open to research opportunities!</p>
 
 <div class="research-interests">
-  <h2>Research Interests</h2>
+  <h2 data-i18n data-en="Research Interests" data-fr="Intérêts de Recherche">Research Interests</h2>
   <ul class="interests-list">
-    <li>Computer Vision & Representation Learning</li>
-    <li>Generative & Probabilistic Machine Learning</li>
-    <li>3D Human-Centered Vision</li>
-    <li>Computational Neuroscience</li>
-    <li>Bayesian Inference & Statistical Modelling</li>
-    <li>Robust Learning from Complex Data</li>
+    <li data-i18n data-en="Computer Vision &amp; 3D Vision" data-fr="Vision par Ordinateur &amp; Vision 3D">Computer Vision &amp; 3D Vision</li>
+    <li data-i18n data-en="6D Pose Estimation" data-fr="Estimation de Pose 6D">6D Pose Estimation</li>
+    <li data-i18n data-en="Generative Models" data-fr="Modèles Génératifs">Generative Models</li>
+    <li data-i18n data-en="Large Language Models" data-fr="Grands Modèles de Langage">Large Language Models</li>
+    <li data-i18n data-en="World Models &amp; Robotics" data-fr="Modèles du Monde &amp; Robotique">World Models &amp; Robotics</li>
+    <li data-i18n data-en="Probabilistic Machine Learning" data-fr="Apprentissage Automatique Probabiliste">Probabilistic Machine Learning</li>
   </ul>
 </div>
 
 <div class="news-section">
-  <h2>Recent News</h2>
+  <h2 data-i18n data-en="Recent News" data-fr="Actualités Récentes">Recent News</h2>
   <ul class="news-list">
-    <li><span class="news-date">Sep 2026</span> Serving as Programme Lead for Deep Learning IndabaX Benin 2026, coordinating the technical programme and speaker sessions.</li>
-    <li><span class="news-date">Jul 2026</span> Attended the TReND-CaMinA 2026 Summer School in Kenya, gaining hands-on experience in computational neuroscience, machine learning, and neural data analysis.</li>
-    <li><span class="news-date">Mar 2026</span> Appointed as Head of Data and AI at GrowUP AI, leading the strategic development of AI solutions and managing data-driven transformation projects.</li>
-    <li><span class="news-date">Mar 2026</span> Served as an Application Reviewer for the 3rd African Computer Vision Summer School (ACVSS 2026).</li>
-    <li><span class="news-date">Dec 2025</span> Delivered a talk on how mathematical modelling and probability help advance generative AI.</li>
-    <li><span class="news-date">Dec 2025</span> Co-organizing Deep Learning Indaba X Benin, 4th Edition.</li>
-    <li><span class="news-date">Nov 2025</span> Leading a workshop on the implementation of diffusion models at the Benin Workshop on Artificial Intelligence (BWAI).</li>
-    <li><span class="news-date">Aug 2025</span> Attended the Deep Learning Indaba Conference in Kigali, Rwanda.</li>
-    <li><span class="news-date">Jul 2025</span> Completed the African Computer Vision Summer School (ACVSS) in Kigali, Rwanda.</li>
-    <li><span class="news-date">Apr-May 2025</span> Participated in the xAI: AI Applications in Sciences workshop by Imperial College London.</li>
-    <li><span class="news-date">Mar-Apr 2025</span> Attended The Science and Engineering of LLMs workshop (Google DeepMind & Mila).</li>
-    <li><span class="news-date">Sep 2024</span> Awarded the DeepMind Scholarship for the Master's programme at AIMS.</li>
+    <li>
+      <span class="news-date">Oct 2026</span>
+      <span data-i18n
+            data-en="Travel grant to attend NeurIPS 2026 in Sydney, Australia."
+            data-fr="Bourse de voyage pour NeurIPS 2026 à Sydney, Australie."
+      >Travel grant to attend NeurIPS 2026 in Sydney, Australia.</span>
+    </li>
+    <li>
+      <span class="news-date">Sep 2026</span>
+      <span data-i18n
+            data-en="Two papers accepted at workshops at NeurIPS 2026."
+            data-fr="Deux articles acceptés dans des ateliers de NeurIPS 2026."
+      >Two papers accepted at workshops at NeurIPS 2026.</span>
+    </li>
+    <li>
+      <span class="news-date">Sep 2026</span>
+      <span data-i18n
+            data-en='Organiser and speaker at the Deep Learning IndabaX Benin 2026 workshop, coordinating the technical programme on NLP, generative AI, LLMs and African languages. <a href="https://josue-do-it.github.io/fon-worshop-indabaXBenin/" target="_blank" class="inline-link">Workshop page →</a>'
+            data-fr='Organisateur et conférencier à l&apos;atelier Deep Learning IndabaX Bénin 2026, coordinant le programme technique sur le NLP, l&apos;IA générative, les LLMs et les langues africaines. <a href="https://josue-do-it.github.io/fon-worshop-indabaXBenin/" target="_blank" class="inline-link">Page de l&apos;atelier →</a>'
+      >Organiser and speaker at the Deep Learning IndabaX Benin 2026 workshop, coordinating the technical programme on NLP, generative AI, LLMs and African languages. <a href="https://josue-do-it.github.io/fon-worshop-indabaXBenin/" target="_blank" class="inline-link">Workshop page →</a></span>
+    </li>
+    <li>
+      <span class="news-date">Aug 2026</span>
+      <span data-i18n
+            data-en="Attended the Deep Learning Indaba in Nigeria, where I presented a poster, served as a juror and attended workshops and sessions."
+            data-fr="Participation au Deep Learning Indaba au Nigeria, où j'ai présenté un poster, servi comme juré et assisté à des ateliers et sessions."
+      >Attended the Deep Learning Indaba in Nigeria, where I presented a poster, served as a juror and attended workshops and sessions.</span>
+    </li>
+    <li>
+      <span class="news-date">Jul 2026</span>
+      <span data-i18n
+            data-en="Attended the AI Research Foundation programme (Google DeepMind)."
+            data-fr="Participation au programme AI Research Foundation (Google DeepMind)."
+      >Attended the AI Research Foundation programme (Google DeepMind).</span>
+    </li>
+    <li>
+      <span class="news-date">Sep 2025 – Jul 2026</span>
+      <span data-i18n
+            data-en="MSc in AI for Science at AIMS (Google DeepMind Scholarship), with intensive training in ML, deep learning, LLMs, explainable AI and Bayesian inference."
+            data-fr="MSc en IA pour les Sciences à l'AIMS (Bourse Google DeepMind), avec une formation intensive en ML, deep learning, LLMs, IA explicable et inférence bayésienne."
+      >MSc in AI for Science at AIMS (Google DeepMind Scholarship), with intensive training in ML, deep learning, LLMs, explainable AI and Bayesian inference.</span>
+    </li>
+    <li>
+      <span class="news-date">Sep 2025</span>
+      <span data-i18n
+            data-en="Awarded the Google DeepMind Scholarship for the MSc programme at AIMS."
+            data-fr="Lauréat de la bourse Google DeepMind pour le programme MSc à l'AIMS."
+      >Awarded the Google DeepMind Scholarship for the MSc programme at AIMS.</span>
+    </li>
   </ul>
 </div>
 
-<!-- <h2>About</h2>
-.post > article > h2, .post h2 { border-bottom: none !important; }
-.news-list li { border-bottom: none !important; }
-<p>
-  I am an aspiring AI researcher with interests in computer vision, probabilistic machine learning, generative modeling, and computational neuroscience. I completed my Master's in Artificial Intelligence for Sciences at the African Institute of Mathematical Sciences (AIMS) in Cape Town, South Africa, where my thesis focused on robust full-body 3D human pose estimation.
-</p>
-
-<p>
-  My work is grounded in strong mathematical foundations and practical experience with PyTorch, TensorFlow, and scientific computing. I am particularly interested in learning reliable representations from complex data, with applications spanning visual perception, generative models, and neural data analysis.
-</p>
-
- <div class="research-interests">
-  <h2>Research Interests</h2>
-  <ul class="interests-list">
-    <li>Computer Vision & Representation Learning</li>
-    <li>Generative & Probabilistic Machine Learning</li>
-    <li>3D Human-Centered Vision</li>
-    <li>Computational Neuroscience</li>
-    <li>Bayesian Inference & Statistical Modeling</li>
-    <li>Robust Learning from Complex Data</li>
-  </ul>
-</div>
-
-  <div class="news-section">
-    <h2>Recent News</h2>
-    <ul class="news-list">
-      <li>
-        <span class="news-date">Sep 2026</span>
-        Serving as Programme Lead for Deep Learning IndabaX Benin 2026, coordinating the technical programme and speaker sessions.
-      </li>
-      <li>
-        <span class="news-date">Jul 2026</span>
-        Attended the TReND-CaMinA 2026 Summer School in Kenya, gaining hands-on experience in computational neuroscience, machine learning, and neural data analysis.
-      </li>
-      <li>
-        <span class="news-date">Mar 2026</span>
-        Appointed as Head of Data and AI at GrowUP AI, leading the strategic development of AI solutions and managing data-driven transformation projects.
-      </li>
-      <li>
-        <span class="news-date">Mar 2026</span>
-        Served as an Application Reviewer for the 3rd African Computer Vision Summer School (ACVSS 2026), contributing to the selection of the next generation of African vision researchers.
-      </li>
-      <li>
-        <span class="news-date">Dec 2025</span>
-        Delivered a talk on how mathematical modeling and probability help advance generative AI, highlighting emerging research and engineering directions.
-      </li>
-      <li>
-        <span class="news-date">Dec 2025</span>
-        Co-organizing Deep Learning Indaba X Benin - 4th Edition
-      </li>
-      <li>
-        <span class="news-date">Nov 2025</span>
-        Leading workshop on Implementation of Diffusion Models at Benin Workshop on Artificial Intelligence (BWAI)
-      </li>
-      <li>
-        <span class="news-date">Aug 2025</span>
-        Attended Deep Learning Indaba Conference in Kigali, Rwanda
-      </li>
-      <li>
-        <span class="news-date">Jul 2025</span>
-        Completed African Computer Vision Summer School (ACVSS) in Kigali, Rwanda
-      </li>
-      <li>
-        <span class="news-date">Apr-May 2025</span>
-        Participated in xAI: AI Applications in Sciences workshop by Imperial College London
-      </li>
-      <li>
-        <span class="news-date">Mar-Apr 2025</span>
-        Attended The Science and Engineering of LLMs workshop (Google DeepMind & Mila)
-      </li>
-      <li>
-        <span class="news-date">Sep 2024</span>
-        Awarded DeepMind Scholarship for Master's program at AIMS
-      </li>
-    </ul>
-<!--profile:
-  align: left
-  image: Josue.jpeg
-  image_circular: false # crops the image to make it circular 
-   
-
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+<script src="{{ '/assets/js/lang.js' | relative_url }}"></script>

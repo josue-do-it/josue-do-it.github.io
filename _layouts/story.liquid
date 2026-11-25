@@ -1,0 +1,93 @@
+---
+layout: post
+---
+{%- comment -%}
+  Story layout — wraps the theme's `post` layout and adds:
+  - a cover image (front matter: cover)
+  - an info line: event, location (front matter: event, location)
+  - a photo gallery with lightbox (front matter: gallery)
+  - optional links (front matter: links)
+{%- endcomment -%}
+
+{% if page.cover %}
+  <figure class="story-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_caption | default: page.title | escape }}">
+    {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
+  </figure>
+{% endif %}
+
+{% if page.event or page.location %}
+  <div class="story-meta">
+    {% if page.event %}<span><i class="fa-solid fa-microphone-lines"></i> {{ page.event }}</span>{% endif %}
+    {% if page.location %}<span><i class="fa-solid fa-location-dot"></i> {{ page.location }}</span>{% endif %}
+  </div>
+{% endif %}
+
+<div class="story-body">
+  {{ content }}
+</div>
+
+{% if page.gallery and page.gallery.size > 0 %}
+  <h2 class="story-gallery-title">Photos</h2>
+  <div class="story-gallery">
+    {% for photo in page.gallery %}
+      {% assign src = photo.src | default: photo %}
+      <figure>
+        <a href="{{ src | relative_url }}" class="story-photo" data-caption="{{ photo.caption | escape }}">
+          <img src="{{ src | relative_url }}" alt="{{ photo.caption | default: page.title | escape }}" loading="lazy">
+        </a>
+        {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if page.links and page.links.size > 0 %}
+  <div class="story-links">
+    {% for l in page.links %}
+      <a class="hero-btn" href="{{ l.url }}" target="_blank" rel="noopener"><i class="{{ l.icon | default: 'fa-solid fa-arrow-up-right-from-square' }}"></i> {{ l.label }}</a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<div class="story-lightbox" id="story-lightbox" hidden>
+  <button type="button" class="story-lightbox-close" aria-label="Close">&times;</button>
+  <button type="button" class="story-lightbox-nav prev" aria-label="Previous">&#8249;</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="story-lightbox-nav next" aria-label="Next">&#8250;</button>
+</div>
+
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.story-photo'));
+    var box = document.getElementById('story-lightbox');
+    if (!links.length || !box) return;
+    var img = box.querySelector('img');
+    var cap = box.querySelector('figcaption');
+    var idx = 0;
+    function show(i) {
+      idx = (i + links.length) % links.length;
+      img.src = links[idx].getAttribute('href');
+      cap.textContent = links[idx].getAttribute('data-caption') || '';
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      box.hidden = true;
+      document.body.style.overflow = '';
+    }
+    links.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); show(i); });
+    });
+    box.querySelector('.story-lightbox-close').addEventListener('click', close);
+    box.querySelector('.prev').addEventListener('click', function () { show(idx - 1); });
+    box.querySelector('.next').addEventListener('click', function () { show(idx + 1); });
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  })();
+</script>

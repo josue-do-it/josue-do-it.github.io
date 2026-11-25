@@ -32,7 +32,7 @@ latest_posts:
        data-fr="Je travaille sur la vision par ordinateur, les grands modèles de langage et la robotique."
     >I work on computer vision, Large Language Models and robotics.</p>
     <div class="hero-buttons">
-      <a class="hero-btn primary" href="{{ '/cv/' | relative_url }}"><i class="fa-solid fa-file-lines"></i> CV</a>
+      <a class="hero-btn primary" href="{{ '/assets/pdf/CV_Josue_Edou.pdf' | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> CV</a>
       <a class="hero-btn" href="https://scholar.google.com/?authuser=2" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
       <a class="hero-btn" href="https://github.com/josue-do-it" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
       <a class="hero-btn" href="https://www.linkedin.com/in/romaricedou/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>

@@ -1,0 +1,89 @@
+---
+layout: page
+permalink: /resources/
+title: Resources
+description:
+nav: true
+nav_order: 4
+---
+
+{%- comment -%}
+  All content comes from _data/resources.yml — edit that file to add books,
+  courses, papers, tools or whole new sections.
+{%- endcomment -%}
+
+<div class="resources-page">
+  <p class="resources-intro" data-i18n
+     data-en="Books, courses, papers and tools I love and recommend. Everything here is something I have used or learned from."
+     data-fr="Livres, cours, articles et outils que j'aime et que je recommande. Tout ce qui est ici m'a servi ou m'a appris quelque chose."
+  >Books, courses, papers and tools I love and recommend. Everything here is something I have used or learned from.</p>
+
+  <div class="resources-toolbar">
+    <div class="resources-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="resources-search" data-i18n data-en="Search a title, author or topic…" data-fr="Rechercher un titre, un auteur ou un sujet…" placeholder="Search a title, author or topic…">
+    </div>
+    <nav class="resources-jump">
+      {% for section in site.data.resources %}
+        <a href="#{{ section.id }}" class="blog-chip"><i class="{{ section.icon }}"></i> <span data-i18n data-en="{{ section.title_en | escape }}" data-fr="{{ section.title_fr | default: section.title_en | escape }}">{{ section.title_en }}</span></a>
+      {% endfor %}
+    </nav>
+  </div>
+
+  {% for section in site.data.resources %}
+    <section class="resources-section" id="{{ section.id }}">
+      <h2><i class="{{ section.icon }}"></i> <span data-i18n data-en="{{ section.title_en | escape }}" data-fr="{{ section.title_fr | default: section.title_en | escape }}">{{ section.title_en }}</span> <small>{{ section.items.size }}</small></h2>
+      <div class="resources-grid">
+        {% for item in section.items %}
+          {% assign tag_str = item.tags | join: ' ' %}
+          {% capture search_str %}{{ item.title }} {{ item.author }} {{ tag_str }}{% endcapture %}
+          <a class="resource-card" href="{{ item.url }}" target="_blank" rel="noopener"
+             data-search="{{ search_str | downcase | strip | escape }}">
+            {% if item.image %}
+              <img class="resource-cover" src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" loading="lazy">
+            {% else %}
+              <span class="resource-icon"><i class="{{ section.icon }}"></i></span>
+            {% endif %}
+            <span class="resource-body">
+              <span class="resource-title">{{ item.title }}</span>
+              {% if item.author %}<span class="resource-author">{{ item.author }}</span>{% endif %}
+              {% if item.note_en %}
+                <span class="resource-note" data-i18n data-en="{{ item.note_en | escape }}" data-fr="{{ item.note_fr | default: item.note_en | escape }}">{{ item.note_en }}</span>
+              {% endif %}
+              <span class="resource-tags">
+                {% if item.free %}<span class="resource-tag free" data-i18n data-en="Free" data-fr="Gratuit">Free</span>{% endif %}
+                {% for t in item.tags %}<span class="resource-tag">{{ t }}</span>{% endfor %}
+              </span>
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+
+  <p class="resources-none" id="resources-none" hidden data-i18n data-en="Nothing matches your search." data-fr="Aucun résultat pour cette recherche.">Nothing matches your search.</p>
+</div>
+
+<script>
+  (function () {
+    var input = document.getElementById('resources-search');
+    if (!input) return;
+    var none = document.getElementById('resources-none');
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var total = 0;
+      document.querySelectorAll('.resources-section').forEach(function (sec) {
+        var shown = 0;
+        sec.querySelectorAll('.resource-card').forEach(function (card) {
+          var hit = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+          card.hidden = !hit;
+          if (hit) shown++;
+        });
+        sec.hidden = shown === 0;
+        total += shown;
+      });
+      none.hidden = total !== 0;
+    });
+  })();
+</script>
+<script src="{{ '/assets/js/lang.js' | relative_url }}"></script>

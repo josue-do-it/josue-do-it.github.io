@@ -1,0 +1,102 @@
+---
+layout: default
+permalink: /blog/
+title: Blog
+nav: true
+nav_order: 1
+---
+
+{%- comment -%}
+  Blog listing. Every file in _posts/ shows up here as a card.
+  Filters come from the `categories` of each post (see _templates/new-post.md).
+{%- endcomment -%}
+
+{% assign category_labels = "conferences:Conferences|Conférences,talks:Talks|Interventions,research:Research|Recherche,stories:Stories|Récits" | split: "," %}
+
+<div class="post blog-page">
+  <header class="blog-header">
+    <h1 data-i18n data-en="Blog" data-fr="Blog">Blog</h1>
+    <p data-i18n
+       data-en="Conferences, talks, research notes and the stories behind them."
+       data-fr="Conférences, interventions, notes de recherche et les histoires qui vont avec."
+    >Conferences, talks, research notes and the stories behind them.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+    <div class="blog-filters" role="tablist">
+      <button type="button" class="blog-chip active" data-filter="all" data-i18n data-en="All" data-fr="Tout">All</button>
+      {% for entry in category_labels %}
+        {% assign parts = entry | split: ":" %}
+        {% assign slug = parts[0] %}
+        {% assign names = parts[1] | split: "|" %}
+        {% assign count = 0 %}
+        {% for post in site.posts %}{% if post.categories contains slug %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}
+        {% if count > 0 %}
+          <button type="button" class="blog-chip" data-filter="{{ slug }}">
+            <span data-i18n data-en="{{ names[0] }}" data-fr="{{ names[1] }}">{{ names[0] }}</span>
+            <small>{{ count }}</small>
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="blog-grid">
+      {% for post in site.posts %}
+        {% assign cover = post.cover | default: post.thumbnail %}
+        {% assign main_cat = post.categories | first %}
+        {% if post.redirect contains '://' %}
+          {% assign href = post.redirect %}
+        {% else %}
+          {% assign href = post.url | relative_url %}
+        {% endif %}
+        <a class="blog-card" href="{{ href }}" data-cats="{{ post.categories | join: ' ' }}"{% if post.redirect contains '://' %} target="_blank" rel="noopener"{% endif %}>
+          <div class="blog-card-media{% unless cover %} no-cover{% endunless %}">
+            {% if cover %}
+              <img src="{{ cover | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+            {% else %}
+              <i class="fa-solid {% case main_cat %}{% when 'conferences' %}fa-users{% when 'talks' %}fa-microphone-lines{% when 'research' %}fa-flask{% else %}fa-feather{% endcase %}"></i>
+            {% endif %}
+            {% if main_cat %}<span class="blog-card-badge">{{ main_cat }}</span>{% endif %}
+            {% if post.gallery and post.gallery.size > 0 %}
+              <span class="blog-card-photos"><i class="fa-regular fa-images"></i> {{ post.gallery.size }}</span>
+            {% endif %}
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}</span>
+              {% if post.location %}<span><i class="fa-solid fa-location-dot"></i> {{ post.location }}</span>{% endif %}
+            </div>
+            <div class="blog-card-title">{{ post.title }}</div>
+            {% if post.description %}<p class="blog-card-desc">{{ post.description }}</p>{% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="blog-empty">
+      <i class="fa-solid fa-feather"></i>
+      <p data-i18n
+         data-en="Stories from conferences, talks and research are coming soon."
+         data-fr="Les récits de conférences, d'interventions et de recherche arrivent bientôt."
+      >Stories from conferences, talks and research are coming soon.</p>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.blog-chip');
+    var cards = document.querySelectorAll('.blog-card');
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var f = chip.getAttribute('data-filter');
+        chips.forEach(function (c) { c.classList.toggle('active', c === chip); });
+        cards.forEach(function (card) {
+          var cats = (card.getAttribute('data-cats') || '').split(' ');
+          card.hidden = !(f === 'all' || cats.indexOf(f) !== -1);
+        });
+      });
+    });
+  })();
+</script>
+<script src="{{ '/assets/js/lang.js' | relative_url }}"></script>

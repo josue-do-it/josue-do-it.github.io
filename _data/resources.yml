@@ -1,0 +1,153 @@
+# -----------------------------------------------------------------------------
+# Resources page (/resources/)
+# -----------------------------------------------------------------------------
+# To add a resource: copy an item block and fill the fields.
+#   title    (required)  name of the book / course / paper / tool
+#   url      (required)  link
+#   author   (optional)  author(s) or organisation
+#   note_en  (optional)  why you like it (English)
+#   note_fr  (optional)  same in French (falls back to note_en)
+#   image    (optional)  cover image, e.g. /assets/img/resources/deep-learning.jpg
+#   tags     (optional)  list of keywords, used by the search box
+#   free     (optional)  true -> shows a "Free" badge
+#
+# To add a whole new section: copy a section block (id, title_en, title_fr, icon, items).
+# Icons: https://fontawesome.com/search?ic=free
+# -----------------------------------------------------------------------------
+
+- id: books
+  title_en: Books
+  title_fr: Livres
+  icon: fa-solid fa-book
+  items:
+    - title: Deep Learning
+      author: Ian Goodfellow, Yoshua Bengio, Aaron Courville
+      url: https://www.deeplearningbook.org/
+      note_en: The classic reference on the foundations of deep learning.
+      note_fr: La référence classique sur les fondements du deep learning.
+      tags: [deep learning, foundations]
+      free: true
+    - title: Mathematics for Machine Learning
+      author: Marc P. Deisenroth, A. Aldo Faisal, Cheng Soon Ong
+      url: https://mml-book.github.io/
+      note_en: Linear algebra, calculus and probability, exactly as needed for ML.
+      note_fr: Algèbre linéaire, calcul et probabilités, juste ce qu'il faut pour le ML.
+      tags: [maths, foundations]
+      free: true
+    - title: "Probabilistic Machine Learning: An Introduction"
+      author: Kevin P. Murphy
+      url: https://probml.github.io/pml-book/book1.html
+      note_en: A modern, probabilistic view of machine learning.
+      note_fr: Une vision moderne et probabiliste de l'apprentissage automatique.
+      tags: [probabilistic ml, bayesian]
+      free: true
+    - title: Pattern Recognition and Machine Learning
+      author: Christopher M. Bishop
+      url: https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/
+      tags: [probabilistic ml, bayesian]
+      free: true
+    - title: "Computer Vision: Algorithms and Applications"
+      author: Richard Szeliski
+      url: https://szeliski.org/Book/
+      note_en: The go-to textbook for computer vision.
+      note_fr: Le manuel de référence en vision par ordinateur.
+      tags: [computer vision]
+      free: true
+    - title: Multiple View Geometry in Computer Vision
+      author: Richard Hartley, Andrew Zisserman
+      url: https://www.robots.ox.ac.uk/~vgg/hzbook/
+      note_en: Camera models, epipolar geometry and 3D reconstruction.
+      note_fr: Modèles de caméra, géométrie épipolaire et reconstruction 3D.
+      tags: [3d vision, geometry, pose]
+    - title: Dive into Deep Learning
+      author: Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola
+      url: https://d2l.ai/
+      tags: [deep learning, pytorch, hands-on]
+      free: true
+
+- id: courses
+  title_en: Courses
+  title_fr: Cours
+  icon: fa-solid fa-graduation-cap
+  items:
+    - title: "CS231n: Deep Learning for Computer Vision"
+      author: Stanford University
+      url: https://cs231n.stanford.edu/
+      tags: [computer vision, deep learning]
+      free: true
+    - title: "Neural Networks: Zero to Hero"
+      author: Andrej Karpathy
+      url: https://karpathy.ai/zero-to-hero.html
+      note_en: Build neural networks and GPT from scratch, line by line.
+      note_fr: Construire des réseaux de neurones et GPT de zéro, ligne par ligne.
+      tags: [llm, deep learning, hands-on]
+      free: true
+    - title: LLM Course
+      author: Hugging Face
+      url: https://huggingface.co/learn/llm-course
+      tags: [llm, nlp, transformers]
+      free: true
+    - title: "MIT 6.S191: Introduction to Deep Learning"
+      author: MIT
+      url: http://introtodeeplearning.com/
+      tags: [deep learning]
+      free: true
+
+- id: papers
+  title_en: Papers I keep coming back to
+  title_fr: Articles que je relis souvent
+  icon: fa-solid fa-file-lines
+  items:
+    - title: Attention Is All You Need
+      author: Vaswani et al., 2017
+      url: https://arxiv.org/abs/1706.03762
+      tags: [transformers, llm]
+    - title: Segment Anything
+      author: Kirillov et al., 2023
+      url: https://arxiv.org/abs/2304.02643
+      tags: [computer vision, segmentation]
+    - title: "FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects"
+      author: Wen et al., 2024
+      url: https://arxiv.org/abs/2312.08344
+      tags: [6d pose, robotics]
+    - title: The Llama 3 Herd of Models
+      author: Meta AI, 2024
+      url: https://arxiv.org/abs/2407.21783
+      tags: [llm]
+
+- id: tools
+  title_en: Tools & Libraries
+  title_fr: Outils & Bibliothèques
+  icon: fa-solid fa-screwdriver-wrench
+  items:
+    - title: PyTorch
+      url: https://pytorch.org/
+      tags: [deep learning, framework]
+    - title: Hugging Face Transformers
+      url: https://huggingface.co/docs/transformers
+      tags: [llm, nlp]
+    - title: Ultralytics (YOLO)
+      url: https://docs.ultralytics.com/
+      tags: [detection, computer vision]
+    - title: Open3D
+      url: https://www.open3d.org/
+      tags: [3d vision, point clouds]
+
+- id: blogs
+  title_en: Blogs & Reading
+  title_fr: Blogs & Lectures
+  icon: fa-solid fa-newspaper
+  items:
+    - title: Distill
+      url: https://distill.pub/
+      note_en: Beautiful, interactive explanations of ML research.
+      note_fr: Des explications interactives et soignées de la recherche en ML.
+      tags: [explainers]
+    - title: Lil'Log
+      author: Lilian Weng
+      url: https://lilianweng.github.io/
+      tags: [llm, deep learning]
+    - title: Andrej Karpathy's blog
+      author: Andrej Karpathy
+      url: https://karpathy.github.io/
+      tags: [deep learning]
